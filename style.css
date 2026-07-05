@@ -1,0 +1,895 @@
+/* ── Шрифты ── */
+@font-face {
+  font-family: 'Foglihten';
+  src: url('fonts/FoglihtenNo06_076.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Better Garamond';
+  src: url('fonts/BetterEBGaramond-Regular-v0.1.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Переменные (макет Figma 402 × 7981) ── */
+:root {
+  --design-w: 402px;
+  --design-h: 7981px;
+  --cream: #f7f5f1;
+  --burgundy: #450611;
+  --white: #ffffff;
+  --font-heading: 'Foglihten', Georgia, serif;
+  --font-body: 'Better Garamond', Georgia, serif;
+  --font-script: 'Marck Script', cursive;
+}
+
+/* ── Сброс ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--white);
+  font-family: var(--font-body);
+  color: #000000;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Масштабирование под мобильные ── */
+.viewport {
+  width: 100vw;
+  overflow-x: hidden;
+  height: calc(var(--design-h) * 100vw / var(--design-w));
+}
+
+.landing {
+  position: relative;
+  width: var(--design-w);
+  height: var(--design-h);
+  background: var(--white);
+  transform: scale(calc(100vw / var(--design-w)));
+  transform-origin: top left;
+}
+
+/* ── Герой ── */
+.hero-bg {
+  position: absolute;
+  width: 414px;
+  height: 724px;
+  left: -6px;
+  top: 0;
+  background: url('images/фон в начале.jpeg') center / cover no-repeat;
+}
+
+.hero-card {
+  position: absolute;
+  width: 314px;
+  height: 417px;
+  left: 43px;
+  top: 110px;
+  background: rgba(237, 237, 239, 0.53);
+  border-radius: 56px;
+}
+
+.hero-names {
+  position: absolute;
+  width: 210px;
+  height: 153px;
+  left: 103px;
+  top: 166px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: #000000;
+}
+
+.hero-date {
+  position: absolute;
+  width: 210px;
+  height: 98px;
+  left: 103px;
+  top: 327px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+  text-align: center;
+  color: #000000;
+}
+
+/* ── Жемчуг (крупный) ── */
+.pearl {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.pearl--4 {
+  width: 95px;
+  height: 96px;
+  left: 20px;
+  top: 479px;
+}
+
+.pearl--2 {
+  width: 122px;
+  height: 124px;
+  left: 317px;
+  top: 604px;
+}
+
+.pearl--1 {
+  width: 210px;
+  height: 213px;
+  left: -37px;
+  top: 882px;
+}
+
+.pearl--5 {
+  width: 114px;
+  height: 116px;
+  left: 7px;
+  top: 2294px;
+}
+
+.pearl--6 {
+  width: 85px;
+  height: 86px;
+  left: -20px;
+  top: 3466px;
+}
+
+.pearl--7 {
+  width: 40px;
+  height: 41px;
+  left: 71px;
+  top: 3555px;
+}
+
+/* ── Блок 1 ── */
+.block1-arch {
+  position: absolute;
+  width: 417px;
+  height: 243.19px;
+  left: -8px;
+  top: 629px;
+  background: var(--cream);
+  border-radius: 50%;
+}
+
+.block1-bg {
+  position: absolute;
+  width: 404px;
+  height: 1788px;
+  left: 0;
+  top: 728px;
+  background: var(--cream);
+}
+
+.welcome-title {
+  position: absolute;
+  width: 304px;
+  height: 84px;
+  left: 49px;
+  top: 732px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: #000000;
+}
+
+.welcome-text {
+  position: absolute;
+  width: 304px;
+  height: 60px;
+  left: 49px;
+  top: 837px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+/* ── Дорожка из жемчуга (раздел «Дорогие родные») ── */
+.beads-string {
+  position: absolute;
+  pointer-events: none;
+}
+
+.beads-string--welcome,
+.beads-string--timing-a,
+.beads-string--timing-b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pearl-sm {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: url('images/жемчуг.png') center / contain no-repeat;
+  pointer-events: none;
+}
+
+.beads-string--welcome .pearl-sm:nth-child(1)  { left: -66.87px; top: 1562.61px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(2)  { left: -61.49px; top: 1549.08px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(3)  { left: 63.66px;  top: 1454.15px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(4)  { left: 86.48px;  top: 1417.25px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(5)  { left: 91.86px;  top: 1403.72px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(6)  { left: 95.35px;  top: 1389px;    transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(7)  { left: 72.82px;  top: 1443.01px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(8)  { left: 81.09px;  top: 1430.78px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(9)  { left: 53.5px;   top: 1465.19px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(10) { left: 15.97px;  top: 1488.54px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(11) { left: 41.56px;  top: 1474.04px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(12) { left: 28.72px;  top: 1481.79px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(13) { left: -23.05px; top: 1506.72px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(14) { left: 3.23px;   top: 1495.3px;  transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(15) { left: -10.3px;  top: 1499.97px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(16) { left: -34.99px; top: 1515.57px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(17) { left: -45.05px; top: 1525.61px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(18) { left: -54.21px; top: 1536.75px; transform: rotate(5.75deg); }
+
+/* Дорожка тайминг A (длинные бусы, left 70, top 1903, rotate -70.09deg) */
+.beads-string--timing-a .pearl-sm:nth-child(1)  { left: 72.07px;  top: 2312.06px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(2)  { left: 78.64px;  top: 2299.07px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(3)  { left: 211.73px; top: 2215.63px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(4)  { left: 237.73px; top: 2180.91px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(5)  { left: 244.29px; top: 2167.91px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(6)  { left: 249.08px; top: 2153.55px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(7)  { left: 221.84px; top: 2205.35px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(8)  { left: 231.16px; top: 2193.9px;  transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(9)  { left: 200.63px; top: 2225.72px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(10) { left: 161.17px; top: 2245.65px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(11) { left: 187.94px; top: 2233.47px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(12) { left: 174.46px; top: 2240.05px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(13) { left: 120.69px; top: 2260.29px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(14) { left: 147.88px; top: 2251.25px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(15) { left: 133.98px; top: 2254.69px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(16) { left: 108px;    top: 2268.04px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(17) { left: 97.09px;  top: 2277.15px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(18) { left: 86.98px;  top: 2287.43px; transform: rotate(10.85deg); }
+
+.beads-string--timing-a .pearl-sm:nth-child(19) { left: 63.34%;  top: 2138.92px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(20) { left: 65.01%;  top: 2126px;    transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(21) { left: 98.36%;  top: 2044.11px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(22) { left: 104.93%; top: 2009.69px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(23) { left: 106.6%;  top: 1996.77px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(24) { left: 107.83%; top: 1982.47px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(25) { left: 100.9%;  top: 2033.95px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(26) { left: 103.26%; top: 2022.61px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(27) { left: 95.57%;  top: 2054.07px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(28) { left: 85.7%;   top: 2073.54px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(29) { left: 92.39%;  top: 2061.67px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(30) { left: 89.02%;  top: 2068.1px;  transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(31) { left: 75.59%;  top: 2087.71px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(32) { left: 82.37%;  top: 2078.98px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(33) { left: 78.91%;  top: 2082.27px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(34) { left: 72.41%;  top: 2095.32px; transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(35) { left: 69.67%;  top: 2104.3px;  transform: rotate(11.51deg); }
+.beads-string--timing-a .pearl-sm:nth-child(36) { left: 67.12%;  top: 2114.46px; transform: rotate(11.51deg); }
+
+/* Дорожка тайминг B (длинные бусы, left -3.56, top 1710.51, rotate -0.38deg) */
+.beads-string--timing-b .pearl-sm:nth-child(1)  { left: -3.55px;  top: 1713.4px;  transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(2)  { left: 10.92px;  top: 1715.05px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(3)  { left: 135.33px; top: 1810.94px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(4)  { left: 176.92px; top: 1823.29px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(5)  { left: 191.38px; top: 1824.94px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(6)  { left: 206.51px; top: 1824.45px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(7)  { left: 148.48px; top: 1816.86px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(8)  { left: 162.45px; top: 1821.64px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(9)  { left: 122.02px; top: 1804.03px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(10) { left: 89.64px;  top: 1773.93px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(11) { left: 110.35px; top: 1794.82px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(12) { left: 99.5px;   top: 1784.46px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(13) { left: 61.87px;  top: 1741.04px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(14) { left: 79.78px;  top: 1763.41px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(15) { left: 71.73px;  top: 1751.57px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(16) { left: 50.2px;   top: 1731.83px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(17) { left: 37.87px;  top: 1724.76px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(18) { left: 24.72px;  top: 1718.83px; transform: rotate(80.56deg); }
+
+.beads-string--timing-b .pearl-sm:nth-child(19) { left: 55.27%;  top: 1824.74px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(20) { left: 58.87%;  top: 1826.56px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(21) { left: 89.54%;  top: 1923.88px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(22) { left: 99.85%;  top: 1936.71px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(23) { left: 103.44%; top: 1938.53px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(24) { left: 107.2%;  top: 1938.21px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(25) { left: 92.79%;  top: 1929.96px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(26) { left: 96.25%;  top: 1934.89px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(27) { left: 86.24%;  top: 1916.82px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(28) { left: 78.28%;  top: 1886.35px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(29) { left: 83.37%;  top: 1907.47px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(30) { left: 80.7%;   top: 1896.99px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(31) { left: 71.47%;  top: 1853.14px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(32) { left: 75.86%;  top: 1875.71px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(33) { left: 73.89%;  top: 1863.78px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(34) { left: 68.59%;  top: 1843.8px;  transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(35) { left: 65.54%;  top: 1836.58px; transform: rotate(81.22deg); }
+.beads-string--timing-b .pearl-sm:nth-child(36) { left: 62.29%;  top: 1830.5px;  transform: rotate(81.22deg); }
+
+/* ── Конверт ── */
+.envelope-group {
+  position: absolute;
+  width: 451.01px;
+  height: 496.76px;
+  left: 22.78px;
+  top: 918.98px;
+  transform: rotate(-3.48deg);
+  display: block;
+}
+
+.envelope-group__img {
+  position: absolute;
+  width: 325px;
+  height: 406px;
+  left: 7.22px;
+  top: 9.02px;
+  object-fit: contain;
+  transform: rotate(-24.94deg);
+  pointer-events: none;
+}
+
+.envelope-group__btn-ellipse {
+  position: absolute;
+  width: 74px;
+  height: 72px;
+  left: 233.1px;
+  top: 297.84px;
+  background: #711818;
+  border-radius: 50%;
+  transform: rotate(-3.48deg);
+}
+
+.envelope-group__btn-text {
+  position: absolute;
+  width: 53px;
+  left: 240.79px;
+  top: 309.9px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(-22.23deg);
+  pointer-events: none;
+}
+
+/* ── Тайминг ── */
+.timing-title {
+  position: absolute;
+  width: 304px;
+  height: 45px;
+  left: 49px;
+  top: 1553px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: #000000;
+}
+
+.timing-item {
+  position: absolute;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.timing-item__time,
+.timing-item__label {
+  display: block;
+}
+
+.timing-item--1 {
+  width: 119px;
+  height: 86px;
+  left: 128px;
+  top: 1662px;
+  text-align: left;
+}
+
+.timing-item--2 {
+  width: 162px;
+  height: 86px;
+  left: 141px;
+  top: 1886px;
+  text-align: center;
+}
+
+.timing-item--3 {
+  width: 119px;
+  height: 86px;
+  left: 82px;
+  top: 2089px;
+  text-align: left;
+}
+
+.timing-item--4 {
+  width: 119px;
+  height: 86px;
+  left: 266px;
+  top: 2216px;
+  text-align: right;
+}
+
+/* ── Бусы (декор, пожелания) ── */
+.beads {
+  position: absolute;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.beads svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+
+.beads--d {
+  width: 428.78px;
+  height: 283.64px;
+  left: -6.08px;
+  top: 3398.48px;
+}
+
+/* ── Переход дресс-код (5 кругов) ── */
+.dress-transition {
+  position: absolute;
+  width: 471.96px;
+  height: 116px;
+  left: -39px;
+  overflow: hidden;
+}
+
+.dress-transition--top {
+  top: 2378px;
+  background: var(--cream);
+}
+
+.dress-transition--bottom {
+  top: 3098px;
+  background: var(--burgundy);
+}
+
+.dress-transition--bottom .dress-transition__circle {
+  background: var(--cream);
+}
+
+.dress-transition--bottom .dress-transition__circle--1 {
+  width: 110px;
+  height: 106px;
+  left: 361.96px;
+  top: 10px;
+}
+
+.dress-transition--bottom .dress-transition__circle--2 {
+  width: 97px;
+  height: 98px;
+  left: 284.96px;
+  top: 0.03px;
+}
+
+.dress-transition--bottom .dress-transition__circle--3 {
+  width: 104px;
+  height: 106px;
+  left: 188.96px;
+  top: 0.06px;
+}
+
+.dress-transition--bottom .dress-transition__circle--4 {
+  width: 94px;
+  height: 94px;
+  left: 105.96px;
+  top: 0.09px;
+}
+
+.dress-transition--bottom .dress-transition__circle--5 {
+  width: 114px;
+  height: 106px;
+  left: 0.96px;
+  top: 0.12px;
+}
+
+.dress-transition--top .dress-transition__circle--1 {
+  width: 114px;
+  height: 106px;
+  left: 0;
+  top: 10px;
+}
+
+.dress-transition--top .dress-transition__circle--2 {
+  width: 94px;
+  height: 94px;
+  left: 105.96px;
+  top: 22px;
+}
+
+.dress-transition--top .dress-transition__circle--3 {
+  width: 104px;
+  height: 106px;
+  left: 179px;
+  top: 10px;
+}
+
+.dress-transition--top .dress-transition__circle--4 {
+  width: 97px;
+  height: 98px;
+  left: 272px;
+  top: 18px;
+}
+
+.dress-transition--top .dress-transition__circle--5 {
+  width: 110px;
+  height: 106px;
+  left: 357px;
+  top: 10px;
+}
+
+.dress-transition__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--burgundy);
+}
+
+/* ── Дресс-код ── */
+.dress-bg {
+  position: absolute;
+  width: 471px;
+  height: 684px;
+  left: -39px;
+  top: 2453px;
+  background: var(--burgundy);
+}
+
+.dress-title {
+  position: absolute;
+  width: 191px;
+  height: 55px;
+  left: 112px;
+  top: 2523px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: var(--white);
+}
+
+.dress-text {
+  position: absolute;
+  width: 313px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white);
+}
+
+.dress-text--1 {
+  height: 74px;
+  left: 51px;
+  top: 2596px;
+}
+
+.dress-text--2 {
+  height: 166px;
+  left: 53px;
+  top: 2896px;
+}
+
+/* ── Образцы ткани ── */
+.swatches-frame {
+  position: absolute;
+  width: 343px;
+  height: 101px;
+  left: 38px;
+  top: 2735px;
+}
+
+.swatches-frame__bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 245, 241, 0.24);
+  border-radius: 50.5px;
+}
+
+.swatches {
+  position: absolute;
+  width: 313px;
+  height: 76px;
+  left: 15px;
+  top: 13px;
+}
+
+.swatches__item {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.swatches__item--sand {
+  left: 0;
+  top: 0;
+  background-image: url('images/песочный шёлк.jpg');
+}
+
+.swatches__item--ecru {
+  left: 49px;
+  top: 1px;
+  background-image: url('images/экрю шёлк.jpg');
+}
+
+.swatches__item--wine {
+  left: 115px;
+  top: 1px;
+  background-image: url('images/красный шёлк.jpg');
+}
+
+.swatches__item--pink {
+  left: 175px;
+  top: 0;
+  background-image: url('images/розовый шёлк.jpg');
+}
+
+.swatches__item--grey {
+  left: 238px;
+  top: 1px;
+  background-image: url('images/серый шёлк.jpg');
+}
+
+/* ── Пожелания ── */
+.wishes-bg {
+  position: absolute;
+  width: 404px;
+  height: 973px;
+  left: -2px;
+  top: 3122px;
+  background: var(--cream);
+}
+
+.wishes-title {
+  position: absolute;
+  width: 200px;
+  height: 48px;
+  left: 97px;
+  top: 3285px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.wishes-text {
+  position: absolute;
+  width: 294px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+}
+
+.wishes-text--1 {
+  height: 97px;
+  left: 53px;
+  top: 3361px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.wishes-text--2 {
+  height: 133px;
+  left: 53px;
+  top: 3779px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.wishes-rose {
+  position: absolute;
+  width: 236.09px;
+  height: 225.55px;
+  left: 162.46px;
+  top: 3458.11px;
+  object-fit: contain;
+  transform: rotate(-45.07deg);
+  pointer-events: none;
+}
+
+.wishes-flowers {
+  position: absolute;
+  width: 82px;
+  height: 26px;
+  left: 40px;
+  top: 3741px;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── RSVP ── */
+.rsvp-arch {
+  position: absolute;
+  width: 433px;
+  height: 268px;
+  left: -14px;
+  top: 3964px;
+  background: var(--burgundy);
+  border-radius: 50%;
+}
+
+.rsvp-bg {
+  position: absolute;
+  width: 404px;
+  height: 684px;
+  left: 0;
+  top: 4072px;
+  background: var(--burgundy);
+}
+
+.rsvp-title {
+  position: absolute;
+  width: 129px;
+  height: 43px;
+  left: 136px;
+  top: 4083px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: var(--white);
+}
+
+.rsvp-subtitle {
+  position: absolute;
+  width: 109px;
+  height: 20px;
+  left: 146px;
+  top: 4133px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.rsvp-text {
+  position: absolute;
+  width: 262px;
+  height: 86px;
+  left: 71px;
+  top: 4187px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white);
+}
+
+.rsvp-form {
+  position: absolute;
+  width: 280px;
+  left: 61px;
+  top: 4300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rsvp-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.rsvp-form__label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.rsvp-form__input {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.rsvp-form__input:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.rsvp-form__input option {
+  color: #000000;
+  background: var(--cream);
+}
+
+.rsvp-form__submit {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  margin-top: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.rsvp-form__submit:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Десктоп: центрирование ── */
+@media (min-width: 403px) {
+  .viewport {
+    width: var(--design-w);
+    height: var(--design-h);
+    margin: 0 auto;
+  }
+
+  .landing {
+    transform: none;
+  }
+}
