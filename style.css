@@ -81,6 +81,17 @@ a {
   background: url('images/фон в начале.jpeg') center / cover no-repeat;
 }
 
+/* tempImagexEucXd 1 — фоновое изображение под блок 1 */
+.hero-overlay {
+  position: absolute;
+  width: 402px;
+  height: 715px;
+  left: 0;
+  top: 710px;
+  background: url('images/фон в начале.jpeg') center / cover no-repeat;
+  pointer-events: none;
+}
+
 .hero-card {
   position: absolute;
   width: 314px;
@@ -216,23 +227,7 @@ a {
   color: #000000;
 }
 
-/* ── Дорожка из жемчуга (раздел «Дорогие родные») ── */
-.beads-string {
-  position: absolute;
-  pointer-events: none;
-}
-
-.beads-string--welcome,
-.beads-string--timing-a,
-.beads-string--timing-b {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
+/* ── Мелкий жемчуг (бусины) ── */
 .pearl-sm {
   position: absolute;
   width: 14px;
@@ -241,28 +236,60 @@ a {
   pointer-events: none;
 }
 
+/* Нить WELCOME (rotate -75.19deg, left -69, top 1142) — px */
 .beads-string--welcome .pearl-sm:nth-child(1)  { left: -66.87px; top: 1562.61px; transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(2)  { left: -61.49px; top: 1549.08px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(3)  { left: 63.66px;  top: 1454.15px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(4)  { left: 86.48px;  top: 1417.25px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(5)  { left: 91.86px;  top: 1403.72px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(6)  { left: 95.35px;  top: 1389px;    transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(7)  { left: 72.82px;  top: 1443.01px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(8)  { left: 81.09px;  top: 1430.78px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(9)  { left: 53.5px;   top: 1465.19px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(10) { left: 15.97px;  top: 1488.54px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(11) { left: 41.56px;  top: 1474.04px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(12) { left: 28.72px;  top: 1481.79px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(3)  { left:  63.66px; top: 1454.15px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(4)  { left:  86.48px; top: 1417.25px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(5)  { left:  91.86px; top: 1403.72px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(6)  { left:  95.35px; top: 1389px;    transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(7)  { left:  72.82px; top: 1443.01px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(8)  { left:  81.09px; top: 1430.78px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(9)  { left:  53.5px;  top: 1465.19px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(10) { left:  15.97px; top: 1488.54px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(11) { left:  41.56px; top: 1474.04px; transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(12) { left:  28.72px; top: 1481.79px; transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(13) { left: -23.05px; top: 1506.72px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(14) { left: 3.23px;   top: 1495.3px;  transform: rotate(5.75deg); }
+.beads-string--welcome .pearl-sm:nth-child(14) { left:   3.23px; top: 1495.3px;  transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(15) { left: -10.3px;  top: 1499.97px; transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(16) { left: -34.99px; top: 1515.57px; transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(17) { left: -45.05px; top: 1525.61px; transform: rotate(5.75deg); }
 .beads-string--welcome .pearl-sm:nth-child(18) { left: -54.21px; top: 1536.75px; transform: rotate(5.75deg); }
 
-/* Дорожка тайминг A (длинные бусы, left 70, top 1903, rotate -70.09deg) */
-.beads-string--timing-a .pearl-sm:nth-child(1)  { left: 72.07px;  top: 2312.06px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(2)  { left: 78.64px;  top: 2299.07px; transform: rotate(10.85deg); }
+/* Нить WELCOME — % (вторая половина) */
+.pearl-sm--w19 { left: 24.77%; top: 1373.92px; transform: rotate(6.42deg); }
+.pearl-sm--w20 { left: 26.15%; top: 1360.45px; transform: rotate(6.42deg); }
+.pearl-sm--w21 { left: 57.55%; top: 1266.97px; transform: rotate(6.42deg); }
+.pearl-sm--w22 { left: 63.33%; top: 1230.34px; transform: rotate(6.42deg); }
+.pearl-sm--w23 { left: 64.71%; top: 1216.87px; transform: rotate(6.42deg); }
+.pearl-sm--w24 { left: 65.62%; top: 1202.19px; transform: rotate(6.42deg); }
+.pearl-sm--w25 { left: 59.86%; top: 1255.94px; transform: rotate(6.42deg); }
+.pearl-sm--w26 { left: 61.96%; top: 1243.8px;  transform: rotate(6.42deg); }
+.pearl-sm--w27 { left: 55%;    top: 1277.89px; transform: rotate(6.42deg); }
+.pearl-sm--w28 { left: 45.59%; top: 1300.81px; transform: rotate(6.42deg); }
+.pearl-sm--w29 { left: 52%;    top: 1286.6px;  transform: rotate(6.42deg); }
+.pearl-sm--w30 { left: 48.78%; top: 1294.2px;  transform: rotate(6.42deg); }
+.pearl-sm--w31 { left: 35.84%; top: 1318.54px; transform: rotate(6.42deg); }
+.pearl-sm--w32 { left: 42.4%;  top: 1307.42px; transform: rotate(6.42deg); }
+.pearl-sm--w33 { left: 39.02%; top: 1311.93px; transform: rotate(6.42deg); }
+.pearl-sm--w34 { left: 32.84%; top: 1327.25px; transform: rotate(6.42deg); }
+.pearl-sm--w35 { left: 30.31%; top: 1337.17px; transform: rotate(6.42deg); }
+.pearl-sm--w36 { left: 28%;    top: 1348.2px;  transform: rotate(6.42deg); }
+
+/* ── Контейнер нитей ── */
+.beads-string {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Нить TIMING-A (rotate -70.09deg, left 70, top 1903) — px */
+.beads-string--timing-a .pearl-sm:nth-child(1)  { left:  72.07px; top: 2312.06px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(2)  { left:  78.64px; top: 2299.07px; transform: rotate(10.85deg); }
 .beads-string--timing-a .pearl-sm:nth-child(3)  { left: 211.73px; top: 2215.63px; transform: rotate(10.85deg); }
 .beads-string--timing-a .pearl-sm:nth-child(4)  { left: 237.73px; top: 2180.91px; transform: rotate(10.85deg); }
 .beads-string--timing-a .pearl-sm:nth-child(5)  { left: 244.29px; top: 2167.91px; transform: rotate(10.85deg); }
@@ -277,31 +304,31 @@ a {
 .beads-string--timing-a .pearl-sm:nth-child(14) { left: 147.88px; top: 2251.25px; transform: rotate(10.85deg); }
 .beads-string--timing-a .pearl-sm:nth-child(15) { left: 133.98px; top: 2254.69px; transform: rotate(10.85deg); }
 .beads-string--timing-a .pearl-sm:nth-child(16) { left: 108px;    top: 2268.04px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(17) { left: 97.09px;  top: 2277.15px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(18) { left: 86.98px;  top: 2287.43px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(17) { left:  97.09px; top: 2277.15px; transform: rotate(10.85deg); }
+.beads-string--timing-a .pearl-sm:nth-child(18) { left:  86.98px; top: 2287.43px; transform: rotate(10.85deg); }
 
-.beads-string--timing-a .pearl-sm:nth-child(19) { left: 63.34%;  top: 2138.92px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(20) { left: 65.01%;  top: 2126px;    transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(21) { left: 98.36%;  top: 2044.11px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(22) { left: 104.93%; top: 2009.69px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(23) { left: 106.6%;  top: 1996.77px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(24) { left: 107.83%; top: 1982.47px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(25) { left: 100.9%;  top: 2033.95px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(26) { left: 103.26%; top: 2022.61px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(27) { left: 95.57%;  top: 2054.07px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(28) { left: 85.7%;   top: 2073.54px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(29) { left: 92.39%;  top: 2061.67px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(30) { left: 89.02%;  top: 2068.1px;  transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(31) { left: 75.59%;  top: 2087.71px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(32) { left: 82.37%;  top: 2078.98px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(33) { left: 78.91%;  top: 2082.27px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(34) { left: 72.41%;  top: 2095.32px; transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(35) { left: 69.67%;  top: 2104.3px;  transform: rotate(11.51deg); }
-.beads-string--timing-a .pearl-sm:nth-child(36) { left: 67.12%;  top: 2114.46px; transform: rotate(11.51deg); }
+.pearl-sm--ta19 { left: 63.34%; top: 2138.92px; transform: rotate(11.51deg); }
+.pearl-sm--ta20 { left: 65.01%; top: 2126px;    transform: rotate(11.51deg); }
+.pearl-sm--ta21 { left: 98.36%; top: 2044.11px; transform: rotate(11.51deg); }
+.pearl-sm--ta22 { left: 104.93%; top: 2009.69px; transform: rotate(11.51deg); }
+.pearl-sm--ta23 { left: 106.6%;  top: 1996.77px; transform: rotate(11.51deg); }
+.pearl-sm--ta24 { left: 107.83%; top: 1982.47px; transform: rotate(11.51deg); }
+.pearl-sm--ta25 { left: 100.9%;  top: 2033.95px; transform: rotate(11.51deg); }
+.pearl-sm--ta26 { left: 103.26%; top: 2022.61px; transform: rotate(11.51deg); }
+.pearl-sm--ta27 { left: 95.57%;  top: 2054.07px; transform: rotate(11.51deg); }
+.pearl-sm--ta28 { left: 85.7%;   top: 2073.54px; transform: rotate(11.51deg); }
+.pearl-sm--ta29 { left: 92.39%;  top: 2061.67px; transform: rotate(11.51deg); }
+.pearl-sm--ta30 { left: 89.02%;  top: 2068.1px;  transform: rotate(11.51deg); }
+.pearl-sm--ta31 { left: 75.59%;  top: 2087.71px; transform: rotate(11.51deg); }
+.pearl-sm--ta32 { left: 82.37%;  top: 2078.98px; transform: rotate(11.51deg); }
+.pearl-sm--ta33 { left: 78.91%;  top: 2082.27px; transform: rotate(11.51deg); }
+.pearl-sm--ta34 { left: 72.41%;  top: 2095.32px; transform: rotate(11.51deg); }
+.pearl-sm--ta35 { left: 69.67%;  top: 2104.3px;  transform: rotate(11.51deg); }
+.pearl-sm--ta36 { left: 67.12%;  top: 2114.46px; transform: rotate(11.51deg); }
 
-/* Дорожка тайминг B (длинные бусы, left -3.56, top 1710.51, rotate -0.38deg) */
-.beads-string--timing-b .pearl-sm:nth-child(1)  { left: -3.55px;  top: 1713.4px;  transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(2)  { left: 10.92px;  top: 1715.05px; transform: rotate(80.56deg); }
+/* Нить TIMING-B (rotate -0.38deg, left -3.56, top 1710.51) — px */
+.beads-string--timing-b .pearl-sm:nth-child(1)  { left:  -3.55px; top: 1713.4px;  transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(2)  { left:  10.92px; top: 1715.05px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(3)  { left: 135.33px; top: 1810.94px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(4)  { left: 176.92px; top: 1823.29px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(5)  { left: 191.38px; top: 1824.94px; transform: rotate(80.56deg); }
@@ -309,34 +336,76 @@ a {
 .beads-string--timing-b .pearl-sm:nth-child(7)  { left: 148.48px; top: 1816.86px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(8)  { left: 162.45px; top: 1821.64px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(9)  { left: 122.02px; top: 1804.03px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(10) { left: 89.64px;  top: 1773.93px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(10) { left:  89.64px; top: 1773.93px; transform: rotate(80.56deg); }
 .beads-string--timing-b .pearl-sm:nth-child(11) { left: 110.35px; top: 1794.82px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(12) { left: 99.5px;   top: 1784.46px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(13) { left: 61.87px;  top: 1741.04px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(14) { left: 79.78px;  top: 1763.41px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(15) { left: 71.73px;  top: 1751.57px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(16) { left: 50.2px;   top: 1731.83px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(17) { left: 37.87px;  top: 1724.76px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(18) { left: 24.72px;  top: 1718.83px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(12) { left:  99.5px;  top: 1784.46px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(13) { left:  61.87px; top: 1741.04px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(14) { left:  79.78px; top: 1763.41px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(15) { left:  71.73px; top: 1751.57px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(16) { left:  50.2px;  top: 1731.83px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(17) { left:  37.87px; top: 1724.76px; transform: rotate(80.56deg); }
+.beads-string--timing-b .pearl-sm:nth-child(18) { left:  24.72px; top: 1718.83px; transform: rotate(80.56deg); }
 
-.beads-string--timing-b .pearl-sm:nth-child(19) { left: 55.27%;  top: 1824.74px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(20) { left: 58.87%;  top: 1826.56px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(21) { left: 89.54%;  top: 1923.88px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(22) { left: 99.85%;  top: 1936.71px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(23) { left: 103.44%; top: 1938.53px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(24) { left: 107.2%;  top: 1938.21px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(25) { left: 92.79%;  top: 1929.96px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(26) { left: 96.25%;  top: 1934.89px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(27) { left: 86.24%;  top: 1916.82px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(28) { left: 78.28%;  top: 1886.35px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(29) { left: 83.37%;  top: 1907.47px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(30) { left: 80.7%;   top: 1896.99px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(31) { left: 71.47%;  top: 1853.14px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(32) { left: 75.86%;  top: 1875.71px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(33) { left: 73.89%;  top: 1863.78px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(34) { left: 68.59%;  top: 1843.8px;  transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(35) { left: 65.54%;  top: 1836.58px; transform: rotate(81.22deg); }
-.beads-string--timing-b .pearl-sm:nth-child(36) { left: 62.29%;  top: 1830.5px;  transform: rotate(81.22deg); }
+.pearl-sm--tb19 { left: 55.27%;  top: 1824.74px; transform: rotate(81.22deg); }
+.pearl-sm--tb20 { left: 58.87%;  top: 1826.56px; transform: rotate(81.22deg); }
+.pearl-sm--tb21 { left: 89.54%;  top: 1923.88px; transform: rotate(81.22deg); }
+.pearl-sm--tb22 { left: 99.85%;  top: 1936.71px; transform: rotate(81.22deg); }
+.pearl-sm--tb23 { left: 103.44%; top: 1938.53px; transform: rotate(81.22deg); }
+.pearl-sm--tb24 { left: 107.2%;  top: 1938.21px; transform: rotate(81.22deg); }
+.pearl-sm--tb25 { left: 92.79%;  top: 1929.96px; transform: rotate(81.22deg); }
+.pearl-sm--tb26 { left: 96.25%;  top: 1934.89px; transform: rotate(81.22deg); }
+.pearl-sm--tb27 { left: 86.24%;  top: 1916.82px; transform: rotate(81.22deg); }
+.pearl-sm--tb28 { left: 78.28%;  top: 1886.35px; transform: rotate(81.22deg); }
+.pearl-sm--tb29 { left: 83.37%;  top: 1907.47px; transform: rotate(81.22deg); }
+.pearl-sm--tb30 { left: 80.7%;   top: 1896.99px; transform: rotate(81.22deg); }
+.pearl-sm--tb31 { left: 71.47%;  top: 1853.14px; transform: rotate(81.22deg); }
+.pearl-sm--tb32 { left: 75.86%;  top: 1875.71px; transform: rotate(81.22deg); }
+.pearl-sm--tb33 { left: 73.89%;  top: 1863.78px; transform: rotate(81.22deg); }
+.pearl-sm--tb34 { left: 68.59%;  top: 1843.8px;  transform: rotate(81.22deg); }
+.pearl-sm--tb35 { left: 65.54%;  top: 1836.58px; transform: rotate(81.22deg); }
+.pearl-sm--tb36 { left: 62.29%;  top: 1830.5px;  transform: rotate(81.22deg); }
+
+/* Нить D (блок пожеланий, left -6.08, top 3398.48) — px */
+.beads-string--d { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+
+.pearl-sm--d1  { left: -6.08px;  top: 3664.13px; transform: rotate(20.32deg); }
+.pearl-sm--d2  { left:  2.53px;  top: 3652.39px; transform: rotate(20.32deg); }
+.pearl-sm--d3  { left: 147.53px; top: 3591.97px; transform: rotate(20.32deg); }
+.pearl-sm--d4  { left: 178.89px; top: 3562px;    transform: rotate(20.32deg); }
+.pearl-sm--d5  { left: 187.5px;  top: 3550.26px; transform: rotate(20.32deg); }
+.pearl-sm--d6  { left: 194.59px; top: 3536.89px; transform: rotate(20.32deg); }
+.pearl-sm--d7  { left: 159.2px;  top: 3583.5px;  transform: rotate(20.32deg); }
+.pearl-sm--d8  { left: 170.28px; top: 3573.74px; transform: rotate(20.32deg); }
+.pearl-sm--d9  { left: 134.92px; top: 3600.1px;  transform: rotate(20.32deg); }
+.pearl-sm--d10 { left:  92.73px; top: 3613.27px; transform: rotate(20.32deg); }
+.pearl-sm--d11 { left: 121.14px; top: 3605.66px; transform: rotate(20.32deg); }
+.pearl-sm--d12 { left: 106.76px; top: 3609.93px; transform: rotate(20.32deg); }
+.pearl-sm--d13 { left:  50.39px; top: 3621.05px; transform: rotate(20.32deg); }
+.pearl-sm--d14 { left:  78.7px;  top: 3616.61px; transform: rotate(20.32deg); }
+.pearl-sm--d15 { left:  64.42px; top: 3617.72px; transform: rotate(20.32deg); }
+.pearl-sm--d16 { left:  36.6px;  top: 3626.61px; transform: rotate(20.32deg); }
+.pearl-sm--d17 { left:  24.34px; top: 3633.8px;  transform: rotate(20.32deg); }
+.pearl-sm--d18 { left:  12.67px; top: 3642.28px; transform: rotate(20.32deg); }
+
+.pearl-sm--d19 { left: 50.37%; top: 3523.39px; transform: rotate(20.98deg); }
+.pearl-sm--d20 { left: 52.55%; top: 3511.75px; transform: rotate(20.98deg); }
+.pearl-sm--d21 { left: 88.79%; top: 3453.02px; transform: rotate(20.98deg); }
+.pearl-sm--d22 { left: 96.67%; top: 3423.41px; transform: rotate(20.98deg); }
+.pearl-sm--d23 { left: 98.85%; top: 3411.77px; transform: rotate(20.98deg); }
+.pearl-sm--d24 { left: 100.65%; top: 3398.48px; transform: rotate(20.98deg); }
+.pearl-sm--d25 { left: 91.71%; top: 3444.68px; transform: rotate(20.98deg); }
+.pearl-sm--d26 { left: 94.5%;  top: 3435.05px; transform: rotate(20.98deg); }
+.pearl-sm--d27 { left: 85.63%; top: 3461px;    transform: rotate(20.98deg); }
+.pearl-sm--d28 { left: 75.09%; top: 3473.68px; transform: rotate(20.98deg); }
+.pearl-sm--d29 { left: 82.18%; top: 3466.4px;  transform: rotate(20.98deg); }
+.pearl-sm--d30 { left: 78.59%; top: 3470.51px; transform: rotate(20.98deg); }
+.pearl-sm--d31 { left: 64.54%; top: 3480.98px; transform: rotate(20.98deg); }
+.pearl-sm--d32 { left: 71.59%; top: 3476.85px; transform: rotate(20.98deg); }
+.pearl-sm--d33 { left: 68.04%; top: 3477.8px;  transform: rotate(20.98deg); }
+.pearl-sm--d34 { left: 61.09%; top: 3486.37px; transform: rotate(20.98deg); }
+.pearl-sm--d35 { left: 58.02%; top: 3493.42px; transform: rotate(20.98deg); }
+.pearl-sm--d36 { left: 55.1%;  top: 3501.76px; transform: rotate(20.98deg); }
+.pearl-sm--d37 { left: 50.37%; top: 3523.39px; transform: rotate(20.98deg); }
 
 /* ── Конверт ── */
 .envelope-group {
@@ -360,6 +429,9 @@ a {
   pointer-events: none;
 }
 
+/* Кнопка конверта: координаты абсолютные внутри группы */
+/* Figma: Ellipse 2 left 255.88, top 1216.82 (глобал) → минус группа (22.78, 918.98+rotate) */
+/* Проще: задаём абсолютно внутри группы, offset = global - group_origin */
 .envelope-group__btn-ellipse {
   position: absolute;
   width: 74px;
@@ -368,7 +440,6 @@ a {
   top: 297.84px;
   background: #711818;
   border-radius: 50%;
-  transform: rotate(-3.48deg);
 }
 
 .envelope-group__btn-text {
@@ -447,27 +518,6 @@ a {
   text-align: right;
 }
 
-/* ── Бусы (декор, пожелания) ── */
-.beads {
-  position: absolute;
-  pointer-events: none;
-  overflow: visible;
-}
-
-.beads svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-
-.beads--d {
-  width: 428.78px;
-  height: 283.64px;
-  left: -6.08px;
-  top: 3398.48px;
-}
-
 /* ── Переход дресс-код (5 кругов) ── */
 .dress-transition {
   position: absolute;
@@ -482,9 +532,47 @@ a {
   background: var(--cream);
 }
 
+/* Figma: top-эллипсы — left 0/90/179/272/357 */
+.dress-transition--top .dress-transition__circle--1 {
+  width: 110px;
+  height: 106px;
+  left: 0;
+  top: 10px;
+}
+
+.dress-transition--top .dress-transition__circle--2 {
+  width: 97px;
+  height: 98px;
+  left: 90px;
+  top: 18px;
+}
+
+.dress-transition--top .dress-transition__circle--3 {
+  width: 104px;
+  height: 106px;
+  left: 179px;
+  top: 10px;
+}
+
+.dress-transition--top .dress-transition__circle--4 {
+  width: 97px;
+  height: 98px;
+  left: 272px;
+  top: 18px;
+}
+
+.dress-transition--top .dress-transition__circle--5 {
+  width: 114px;
+  height: 106px;
+  left: 357px;
+  top: 10px;
+}
+
 .dress-transition--bottom {
   top: 3098px;
   background: var(--burgundy);
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+  transform-origin: center;
 }
 
 .dress-transition--bottom .dress-transition__circle {
@@ -524,41 +612,6 @@ a {
   height: 106px;
   left: 0.96px;
   top: 0.12px;
-}
-
-.dress-transition--top .dress-transition__circle--1 {
-  width: 114px;
-  height: 106px;
-  left: 0;
-  top: 10px;
-}
-
-.dress-transition--top .dress-transition__circle--2 {
-  width: 94px;
-  height: 94px;
-  left: 105.96px;
-  top: 22px;
-}
-
-.dress-transition--top .dress-transition__circle--3 {
-  width: 104px;
-  height: 106px;
-  left: 179px;
-  top: 10px;
-}
-
-.dress-transition--top .dress-transition__circle--4 {
-  width: 97px;
-  height: 98px;
-  left: 272px;
-  top: 18px;
-}
-
-.dress-transition--top .dress-transition__circle--5 {
-  width: 110px;
-  height: 106px;
-  left: 357px;
-  top: 10px;
 }
 
 .dress-transition__circle {
@@ -675,6 +728,17 @@ a {
   left: 238px;
   top: 1px;
   background-image: url('images/серый шёлк.jpg');
+}
+
+/* жемчуг 3 внутри swatches-frame: left 305, top 92 (локал) */
+.swatches-pearl3 {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 305px;
+  top: 92px;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 /* ── Пожелания ── */
