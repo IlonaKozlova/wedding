@@ -1,4 +1,4 @@
-/* ── Шрифты ── */
+/* ══ Шрифты ══ */
 @font-face {
   font-family: 'Foglihten';
   src: url('fonts/FoglihtenNo06_076.otf') format('opentype');
@@ -6,7 +6,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Better Garamond';
   src: url('fonts/BetterEBGaramond-Regular-v0.1.otf') format('opentype');
@@ -15,269 +14,122 @@
   font-display: swap;
 }
 
-/* ── Переменные (макет Figma 402 × 7981) ── */
+/* ══ Переменные ══ */
 :root {
-  --design-w: 402px;
-  --design-h: 7981px;
   --cream: #f7f5f1;
   --burgundy: #450611;
   --white: #ffffff;
-  --font-heading: 'Foglihten', Georgia, serif;
-  --font-body: 'Better Garamond', Georgia, serif;
-  --font-script: 'Marck Script', cursive;
+  --fh: 'Foglihten', Georgia, serif;
+  --fb: 'Better Garamond', Georgia, serif;
+  --fs: 'Marck Script', cursive;
 }
 
-/* ── Сброс ── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ══ Сброс ══ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--white); font-family: var(--fb); color: #000; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
+/* ══ Страница ══ */
+.page {
+  max-width: 402px;
+  margin: 0 auto;
+  overflow: hidden;
   background: var(--white);
-  font-family: var(--font-body);
-  color: #000000;
 }
 
-img {
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ── Масштабирование под мобильные ── */
-.viewport {
-  width: 100vw;
-  overflow-x: hidden;
-  height: calc(var(--design-h) * 100vw / var(--design-w));
-}
-
-.landing {
+/* ══════════════════════════
+   HERO
+══════════════════════════ */
+.hero {
   position: relative;
-  width: var(--design-w);
-  height: var(--design-h);
-  background: var(--white);
-  transform: scale(calc(100vw / var(--design-w)));
-  transform-origin: top left;
+  height: 720px;
+  overflow: hidden;
 }
 
-/* ── Герой ── */
-.hero-bg {
+.hero__bg {
   position: absolute;
-  width: 414px;
-  height: 724px;
-  left: -6px;
-  top: 0;
-  background: url('images/фон в начале.jpeg') center / cover no-repeat;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
-/* tempImagexEucXd 1 — фоновое изображение под блок 1 */
-.hero-overlay {
+.hero__card {
   position: absolute;
-  width: 402px;
-  height: 715px;
-  left: 0;
-  top: 710px;
-  background: url('images/фон в начале.jpeg') center / cover no-repeat;
-  pointer-events: none;
-}
-
-.hero-card {
-  position: absolute;
-  width: 314px;
-  height: 417px;
-  left: 43px;
+  left: 44px;
+  right: 44px;
   top: 110px;
+  height: 417px;
   background: rgba(237, 237, 239, 0.53);
   border-radius: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-.hero-names {
-  position: absolute;
-  width: 210px;
-  height: 153px;
-  left: 103px;
-  top: 166px;
-  font-family: var(--font-heading);
+.hero__names {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 32px;
   line-height: 41px;
   text-align: center;
-  color: #000000;
+  color: #000;
 }
 
-.hero-date {
-  position: absolute;
-  width: 210px;
-  height: 98px;
-  left: 103px;
-  top: 327px;
-  font-family: var(--font-heading);
+.hero__date {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 48px;
   line-height: 61px;
   text-align: center;
-  color: #000000;
+  color: #000;
 }
 
-/* ── Жемчуг (крупный) ── */
-.pearl {
+.hero__pearl-bl {
   position: absolute;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.pearl--4 {
   width: 95px;
-  height: 96px;
+  bottom: 60px;
   left: 20px;
-  top: 479px;
-}
-
-.pearl--2 {
-  width: 122px;
-  height: 124px;
-  left: 317px;
-  top: 604px;
-}
-
-.pearl--1 {
-  width: 210px;
-  height: 213px;
-  left: -37px;
-  top: 882px;
-}
-
-.pearl--5 {
-  width: 114px;
-  height: 116px;
-  left: 7px;
-  top: 2294px;
-}
-
-.pearl--6 {
-  width: 85px;
-  height: 86px;
-  left: -20px;
-  top: 3466px;
-}
-
-.pearl--7 {
-  width: 40px;
-  height: 41px;
-  left: 71px;
-  top: 3555px;
-}
-
-/* ── Блок 1 ── */
-.block1-arch {
-  position: absolute;
-  width: 417px;
-  height: 243.19px;
-  left: -8px;
-  top: 629px;
-  background: var(--cream);
-  border-radius: 50%;
-}
-
-.block1-bg {
-  position: absolute;
-  width: 404px;
-  height: 1788px;
-  left: 0;
-  top: 728px;
-  background: var(--cream);
-}
-
-.welcome-title {
-  position: absolute;
-  width: 304px;
-  height: 84px;
-  left: 49px;
-  top: 732px;
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 41px;
-  text-align: center;
-  color: #000000;
-}
-
-.welcome-text {
-  position: absolute;
-  width: 304px;
-  height: 60px;
-  left: 49px;
-  top: 837px;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
-  color: #000000;
-}
-
-/* ── Мелкий жемчуг (бусины) ── */
-.pearl-sm {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: url('images/жемчуг.png') center / contain no-repeat;
   pointer-events: none;
 }
 
-/* Нить WELCOME (rotate -75.19deg, left -69, top 1142) — px */
-.beads-string--welcome .pearl-sm:nth-child(1)  { left: -66.87px; top: 1562.61px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(2)  { left: -61.49px; top: 1549.08px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(3)  { left:  63.66px; top: 1454.15px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(4)  { left:  86.48px; top: 1417.25px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(5)  { left:  91.86px; top: 1403.72px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(6)  { left:  95.35px; top: 1389px;    transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(7)  { left:  72.82px; top: 1443.01px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(8)  { left:  81.09px; top: 1430.78px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(9)  { left:  53.5px;  top: 1465.19px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(10) { left:  15.97px; top: 1488.54px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(11) { left:  41.56px; top: 1474.04px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(12) { left:  28.72px; top: 1481.79px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(13) { left: -23.05px; top: 1506.72px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(14) { left:   3.23px; top: 1495.3px;  transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(15) { left: -10.3px;  top: 1499.97px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(16) { left: -34.99px; top: 1515.57px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(17) { left: -45.05px; top: 1525.61px; transform: rotate(5.75deg); }
-.beads-string--welcome .pearl-sm:nth-child(18) { left: -54.21px; top: 1536.75px; transform: rotate(5.75deg); }
+.hero__pearl-br {
+  position: absolute;
+  width: 122px;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
 
-/* Нить WELCOME — % (вторая половина) */
-.pearl-sm--w19 { left: 24.77%; top: 1373.92px; transform: rotate(6.42deg); }
-.pearl-sm--w20 { left: 26.15%; top: 1360.45px; transform: rotate(6.42deg); }
-.pearl-sm--w21 { left: 57.55%; top: 1266.97px; transform: rotate(6.42deg); }
-.pearl-sm--w22 { left: 63.33%; top: 1230.34px; transform: rotate(6.42deg); }
-.pearl-sm--w23 { left: 64.71%; top: 1216.87px; transform: rotate(6.42deg); }
-.pearl-sm--w24 { left: 65.62%; top: 1202.19px; transform: rotate(6.42deg); }
-.pearl-sm--w25 { left: 59.86%; top: 1255.94px; transform: rotate(6.42deg); }
-.pearl-sm--w26 { left: 61.96%; top: 1243.8px;  transform: rotate(6.42deg); }
-.pearl-sm--w27 { left: 55%;    top: 1277.89px; transform: rotate(6.42deg); }
-.pearl-sm--w28 { left: 45.59%; top: 1300.81px; transform: rotate(6.42deg); }
-.pearl-sm--w29 { left: 52%;    top: 1286.6px;  transform: rotate(6.42deg); }
-.pearl-sm--w30 { left: 48.78%; top: 1294.2px;  transform: rotate(6.42deg); }
-.pearl-sm--w31 { left: 35.84%; top: 1318.54px; transform: rotate(6.42deg); }
-.pearl-sm--w32 { left: 42.4%;  top: 1307.42px; transform: rotate(6.42deg); }
-.pearl-sm--w33 { left: 39.02%; top: 1311.93px; transform: rotate(6.42deg); }
-.pearl-sm--w34 { left: 32.84%; top: 1327.25px; transform: rotate(6.42deg); }
-.pearl-sm--w35 { left: 30.31%; top: 1337.17px; transform: rotate(6.42deg); }
-.pearl-sm--w36 { left: 28%;    top: 1348.2px;  transform: rotate(6.42deg); }
+/* ══════════════════════════
+   WELCOME
+══════════════════════════ */
+.welcome {
+  position: relative;
+  background: var(--cream);
+  padding: 48px 49px 80px;
+  /* арка сверху */
+  border-radius: 50% 50% 0 0 / 40px 40px 0 0;
+  margin-top: -32px;
+  overflow: visible;
+}
 
-/* ── Контейнер нитей ── */
-.beads-string {
+.welcome__pearl-big {
+  position: absolute;
+  width: 210px;
+  top: -56px;
+  left: -37px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* нить бусин слева — SVG-линия через CSS */
+.welcome__beads {
   position: absolute;
   left: 0;
   top: 0;
@@ -287,411 +139,311 @@ a {
   overflow: visible;
 }
 
-/* Нить TIMING-A (rotate -70.09deg, left 70, top 1903) — px */
-.beads-string--timing-a .pearl-sm:nth-child(1)  { left:  72.07px; top: 2312.06px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(2)  { left:  78.64px; top: 2299.07px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(3)  { left: 211.73px; top: 2215.63px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(4)  { left: 237.73px; top: 2180.91px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(5)  { left: 244.29px; top: 2167.91px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(6)  { left: 249.08px; top: 2153.55px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(7)  { left: 221.84px; top: 2205.35px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(8)  { left: 231.16px; top: 2193.9px;  transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(9)  { left: 200.63px; top: 2225.72px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(10) { left: 161.17px; top: 2245.65px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(11) { left: 187.94px; top: 2233.47px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(12) { left: 174.46px; top: 2240.05px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(13) { left: 120.69px; top: 2260.29px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(14) { left: 147.88px; top: 2251.25px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(15) { left: 133.98px; top: 2254.69px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(16) { left: 108px;    top: 2268.04px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(17) { left:  97.09px; top: 2277.15px; transform: rotate(10.85deg); }
-.beads-string--timing-a .pearl-sm:nth-child(18) { left:  86.98px; top: 2287.43px; transform: rotate(10.85deg); }
-
-.pearl-sm--ta19 { left: 63.34%; top: 2138.92px; transform: rotate(11.51deg); }
-.pearl-sm--ta20 { left: 65.01%; top: 2126px;    transform: rotate(11.51deg); }
-.pearl-sm--ta21 { left: 98.36%; top: 2044.11px; transform: rotate(11.51deg); }
-.pearl-sm--ta22 { left: 104.93%; top: 2009.69px; transform: rotate(11.51deg); }
-.pearl-sm--ta23 { left: 106.6%;  top: 1996.77px; transform: rotate(11.51deg); }
-.pearl-sm--ta24 { left: 107.83%; top: 1982.47px; transform: rotate(11.51deg); }
-.pearl-sm--ta25 { left: 100.9%;  top: 2033.95px; transform: rotate(11.51deg); }
-.pearl-sm--ta26 { left: 103.26%; top: 2022.61px; transform: rotate(11.51deg); }
-.pearl-sm--ta27 { left: 95.57%;  top: 2054.07px; transform: rotate(11.51deg); }
-.pearl-sm--ta28 { left: 85.7%;   top: 2073.54px; transform: rotate(11.51deg); }
-.pearl-sm--ta29 { left: 92.39%;  top: 2061.67px; transform: rotate(11.51deg); }
-.pearl-sm--ta30 { left: 89.02%;  top: 2068.1px;  transform: rotate(11.51deg); }
-.pearl-sm--ta31 { left: 75.59%;  top: 2087.71px; transform: rotate(11.51deg); }
-.pearl-sm--ta32 { left: 82.37%;  top: 2078.98px; transform: rotate(11.51deg); }
-.pearl-sm--ta33 { left: 78.91%;  top: 2082.27px; transform: rotate(11.51deg); }
-.pearl-sm--ta34 { left: 72.41%;  top: 2095.32px; transform: rotate(11.51deg); }
-.pearl-sm--ta35 { left: 69.67%;  top: 2104.3px;  transform: rotate(11.51deg); }
-.pearl-sm--ta36 { left: 67.12%;  top: 2114.46px; transform: rotate(11.51deg); }
-
-/* Нить TIMING-B (rotate -0.38deg, left -3.56, top 1710.51) — px */
-.beads-string--timing-b .pearl-sm:nth-child(1)  { left:  -3.55px; top: 1713.4px;  transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(2)  { left:  10.92px; top: 1715.05px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(3)  { left: 135.33px; top: 1810.94px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(4)  { left: 176.92px; top: 1823.29px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(5)  { left: 191.38px; top: 1824.94px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(6)  { left: 206.51px; top: 1824.45px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(7)  { left: 148.48px; top: 1816.86px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(8)  { left: 162.45px; top: 1821.64px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(9)  { left: 122.02px; top: 1804.03px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(10) { left:  89.64px; top: 1773.93px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(11) { left: 110.35px; top: 1794.82px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(12) { left:  99.5px;  top: 1784.46px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(13) { left:  61.87px; top: 1741.04px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(14) { left:  79.78px; top: 1763.41px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(15) { left:  71.73px; top: 1751.57px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(16) { left:  50.2px;  top: 1731.83px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(17) { left:  37.87px; top: 1724.76px; transform: rotate(80.56deg); }
-.beads-string--timing-b .pearl-sm:nth-child(18) { left:  24.72px; top: 1718.83px; transform: rotate(80.56deg); }
-
-.pearl-sm--tb19 { left: 55.27%;  top: 1824.74px; transform: rotate(81.22deg); }
-.pearl-sm--tb20 { left: 58.87%;  top: 1826.56px; transform: rotate(81.22deg); }
-.pearl-sm--tb21 { left: 89.54%;  top: 1923.88px; transform: rotate(81.22deg); }
-.pearl-sm--tb22 { left: 99.85%;  top: 1936.71px; transform: rotate(81.22deg); }
-.pearl-sm--tb23 { left: 103.44%; top: 1938.53px; transform: rotate(81.22deg); }
-.pearl-sm--tb24 { left: 107.2%;  top: 1938.21px; transform: rotate(81.22deg); }
-.pearl-sm--tb25 { left: 92.79%;  top: 1929.96px; transform: rotate(81.22deg); }
-.pearl-sm--tb26 { left: 96.25%;  top: 1934.89px; transform: rotate(81.22deg); }
-.pearl-sm--tb27 { left: 86.24%;  top: 1916.82px; transform: rotate(81.22deg); }
-.pearl-sm--tb28 { left: 78.28%;  top: 1886.35px; transform: rotate(81.22deg); }
-.pearl-sm--tb29 { left: 83.37%;  top: 1907.47px; transform: rotate(81.22deg); }
-.pearl-sm--tb30 { left: 80.7%;   top: 1896.99px; transform: rotate(81.22deg); }
-.pearl-sm--tb31 { left: 71.47%;  top: 1853.14px; transform: rotate(81.22deg); }
-.pearl-sm--tb32 { left: 75.86%;  top: 1875.71px; transform: rotate(81.22deg); }
-.pearl-sm--tb33 { left: 73.89%;  top: 1863.78px; transform: rotate(81.22deg); }
-.pearl-sm--tb34 { left: 68.59%;  top: 1843.8px;  transform: rotate(81.22deg); }
-.pearl-sm--tb35 { left: 65.54%;  top: 1836.58px; transform: rotate(81.22deg); }
-.pearl-sm--tb36 { left: 62.29%;  top: 1830.5px;  transform: rotate(81.22deg); }
-
-/* Нить D (блок пожеланий, left -6.08, top 3398.48) — px */
-.beads-string--d { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
-
-.pearl-sm--d1  { left: -6.08px;  top: 3664.13px; transform: rotate(20.32deg); }
-.pearl-sm--d2  { left:  2.53px;  top: 3652.39px; transform: rotate(20.32deg); }
-.pearl-sm--d3  { left: 147.53px; top: 3591.97px; transform: rotate(20.32deg); }
-.pearl-sm--d4  { left: 178.89px; top: 3562px;    transform: rotate(20.32deg); }
-.pearl-sm--d5  { left: 187.5px;  top: 3550.26px; transform: rotate(20.32deg); }
-.pearl-sm--d6  { left: 194.59px; top: 3536.89px; transform: rotate(20.32deg); }
-.pearl-sm--d7  { left: 159.2px;  top: 3583.5px;  transform: rotate(20.32deg); }
-.pearl-sm--d8  { left: 170.28px; top: 3573.74px; transform: rotate(20.32deg); }
-.pearl-sm--d9  { left: 134.92px; top: 3600.1px;  transform: rotate(20.32deg); }
-.pearl-sm--d10 { left:  92.73px; top: 3613.27px; transform: rotate(20.32deg); }
-.pearl-sm--d11 { left: 121.14px; top: 3605.66px; transform: rotate(20.32deg); }
-.pearl-sm--d12 { left: 106.76px; top: 3609.93px; transform: rotate(20.32deg); }
-.pearl-sm--d13 { left:  50.39px; top: 3621.05px; transform: rotate(20.32deg); }
-.pearl-sm--d14 { left:  78.7px;  top: 3616.61px; transform: rotate(20.32deg); }
-.pearl-sm--d15 { left:  64.42px; top: 3617.72px; transform: rotate(20.32deg); }
-.pearl-sm--d16 { left:  36.6px;  top: 3626.61px; transform: rotate(20.32deg); }
-.pearl-sm--d17 { left:  24.34px; top: 3633.8px;  transform: rotate(20.32deg); }
-.pearl-sm--d18 { left:  12.67px; top: 3642.28px; transform: rotate(20.32deg); }
-
-.pearl-sm--d19 { left: 50.37%; top: 3523.39px; transform: rotate(20.98deg); }
-.pearl-sm--d20 { left: 52.55%; top: 3511.75px; transform: rotate(20.98deg); }
-.pearl-sm--d21 { left: 88.79%; top: 3453.02px; transform: rotate(20.98deg); }
-.pearl-sm--d22 { left: 96.67%; top: 3423.41px; transform: rotate(20.98deg); }
-.pearl-sm--d23 { left: 98.85%; top: 3411.77px; transform: rotate(20.98deg); }
-.pearl-sm--d24 { left: 100.65%; top: 3398.48px; transform: rotate(20.98deg); }
-.pearl-sm--d25 { left: 91.71%; top: 3444.68px; transform: rotate(20.98deg); }
-.pearl-sm--d26 { left: 94.5%;  top: 3435.05px; transform: rotate(20.98deg); }
-.pearl-sm--d27 { left: 85.63%; top: 3461px;    transform: rotate(20.98deg); }
-.pearl-sm--d28 { left: 75.09%; top: 3473.68px; transform: rotate(20.98deg); }
-.pearl-sm--d29 { left: 82.18%; top: 3466.4px;  transform: rotate(20.98deg); }
-.pearl-sm--d30 { left: 78.59%; top: 3470.51px; transform: rotate(20.98deg); }
-.pearl-sm--d31 { left: 64.54%; top: 3480.98px; transform: rotate(20.98deg); }
-.pearl-sm--d32 { left: 71.59%; top: 3476.85px; transform: rotate(20.98deg); }
-.pearl-sm--d33 { left: 68.04%; top: 3477.8px;  transform: rotate(20.98deg); }
-.pearl-sm--d34 { left: 61.09%; top: 3486.37px; transform: rotate(20.98deg); }
-.pearl-sm--d35 { left: 58.02%; top: 3493.42px; transform: rotate(20.98deg); }
-.pearl-sm--d36 { left: 55.1%;  top: 3501.76px; transform: rotate(20.98deg); }
-.pearl-sm--d37 { left: 50.37%; top: 3523.39px; transform: rotate(20.98deg); }
-
-/* ── Конверт ── */
-.envelope-group {
+.welcome__beads--left span {
   position: absolute;
-  width: 451.01px;
-  height: 496.76px;
-  left: 22.78px;
-  top: 918.98px;
-  transform: rotate(-3.48deg);
   display: block;
+  width: 14px;
+  height: 14px;
+  background: url('images/жемчуг.png') center / contain no-repeat;
 }
 
-.envelope-group__img {
-  position: absolute;
-  width: 325px;
-  height: 406px;
-  left: 7.22px;
-  top: 9.02px;
-  object-fit: contain;
-  transform: rotate(-24.94deg);
-  pointer-events: none;
-}
+/* 20 бусин размещаем диагональной нитью слева */
+.welcome__beads--left span:nth-child(1)  { left: -55px; top: 172px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(2)  { left: -50px; top: 158px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(3)  { left: -44px; top: 145px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(4)  { left: -37px; top: 132px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(5)  { left: -29px; top: 119px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(6)  { left: -20px; top: 108px; transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(7)  { left: -10px; top: 97px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(8)  { left:   1px; top: 87px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(9)  { left:  13px; top: 77px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(10) { left:  25px; top: 68px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(11) { left:  38px; top: 60px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(12) { left:  52px; top: 53px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(13) { left:  67px; top: 47px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(14) { left:  82px; top: 42px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(15) { left:  98px; top: 38px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(16) { left: 114px; top: 36px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(17) { left: 130px; top: 34px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(18) { left: 146px; top: 33px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(19) { left: 162px; top: 33px;  transform: rotate(6deg); }
+.welcome__beads--left span:nth-child(20) { left: 177px; top: 34px;  transform: rotate(6deg); }
 
-/* Кнопка конверта: координаты абсолютные внутри группы */
-/* Figma: Ellipse 2 left 255.88, top 1216.82 (глобал) → минус группа (22.78, 918.98+rotate) */
-/* Проще: задаём абсолютно внутри группы, offset = global - group_origin */
-.envelope-group__btn-ellipse {
-  position: absolute;
-  width: 74px;
-  height: 72px;
-  left: 233.1px;
-  top: 297.84px;
-  background: #711818;
-  border-radius: 50%;
-}
-
-.envelope-group__btn-text {
-  position: absolute;
-  width: 53px;
-  left: 240.79px;
-  top: 309.9px;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: #ffffff;
-  transform: rotate(-22.23deg);
-  pointer-events: none;
-}
-
-/* ── Тайминг ── */
-.timing-title {
-  position: absolute;
-  width: 304px;
-  height: 45px;
-  left: 49px;
-  top: 1553px;
-  font-family: var(--font-heading);
+.welcome__title {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 32px;
   line-height: 41px;
   text-align: center;
-  color: #000000;
+  color: #000;
+  margin-bottom: 20px;
 }
 
-.timing-item {
+.welcome__text {
+  font-family: var(--fb);
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.welcome__envelope {
+  position: relative;
+  width: 325px;
+  height: 380px;
+  margin: 0 auto;
+  transform: rotate(-3deg);
+}
+
+.welcome__envelope-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(-22deg);
+  transform-origin: center center;
+}
+
+.welcome__map-btn {
   position: absolute;
-  font-family: var(--font-heading);
+  right: -16px;
+  bottom: 60px;
+  width: 74px;
+  height: 72px;
+  background: #711818;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fb);
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  transform: rotate(-22deg);
+}
+
+/* ══════════════════════════
+   TIMING
+══════════════════════════ */
+.timing {
+  position: relative;
+  background: var(--cream);
+  padding: 0 49px 60px;
+}
+
+.timing__title {
+  font-family: var(--fh);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  text-align: center;
+  color: #000;
+  padding-top: 16px;
+  margin-bottom: 40px;
+}
+
+/* Нити бусин */
+.timing__beads {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.timing__beads span {
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url('images/жемчуг.png') center / contain no-repeat;
+}
+
+/* Горизонтальная нить — сверху блока */
+.timing__beads--h span:nth-child(1)  { left:  -4px;  top: 0px;  transform: rotate(81deg); }
+.timing__beads--h span:nth-child(2)  { left:  11px;  top: 1px;  transform: rotate(81deg); }
+.timing__beads--h span:nth-child(3)  { left:  25px;  top: 5px;  transform: rotate(81deg); }
+.timing__beads--h span:nth-child(4)  { left:  38px;  top: 11px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(5)  { left:  50px;  top: 18px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(6)  { left:  62px;  top: 26px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(7)  { left:  73px;  top: 35px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(8)  { left:  84px;  top: 44px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(9)  { left:  95px;  top: 55px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(10) { left: 107px;  top: 65px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(11) { left: 121px;  top: 73px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(12) { left: 135px;  top: 80px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(13) { left: 149px;  top: 85px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(14) { left: 163px;  top: 89px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(15) { left: 176px;  top: 92px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(16) { left: 190px;  top: 93px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(17) { left: 205px;  top: 93px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(18) { left: 220px;  top: 92px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(19) { left: 235px;  top: 89px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(20) { left: 249px;  top: 85px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(21) { left: 262px;  top: 80px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(22) { left: 275px;  top: 73px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(23) { left: 288px;  top: 65px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(24) { left: 300px;  top: 55px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(25) { left: 312px;  top: 45px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(26) { left: 323px;  top: 35px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(27) { left: 334px;  top: 24px; transform: rotate(81deg); }
+.timing__beads--h span:nth-child(28) { left: 345px;  top: 13px; transform: rotate(81deg); }
+
+/* диагональная нить 1 (после 16:00) */
+.timing__beads--d1 { }
+.timing__beads--d1 span:nth-child(1)  { left:  87px; top: 232px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(2)  { left:  97px; top: 219px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(3)  { left: 107px; top: 207px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(4)  { left: 118px; top: 196px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(5)  { left: 130px; top: 185px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(6)  { left: 143px; top: 176px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(7)  { left: 156px; top: 168px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(8)  { left: 170px; top: 161px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(9)  { left: 184px; top: 155px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(10) { left: 199px; top: 151px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(11) { left: 214px; top: 148px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(12) { left: 229px; top: 147px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(13) { left: 244px; top: 147px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(14) { left: 259px; top: 148px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(15) { left: 274px; top: 151px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(16) { left: 289px; top: 156px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(17) { left: 303px; top: 163px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(18) { left: 317px; top: 171px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(19) { left: 330px; top: 181px; transform: rotate(11deg); }
+.timing__beads--d1 span:nth-child(20) { left: 342px; top: 193px; transform: rotate(11deg); }
+
+/* диагональная нить 2 (после 16:30) */
+.timing__beads--d2 span:nth-child(1)  { left:  73px; top: 430px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(2)  { left:  84px; top: 443px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(3)  { left:  96px; top: 455px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(4)  { left: 109px; top: 466px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(5)  { left: 123px; top: 476px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(6)  { left: 138px; top: 484px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(7)  { left: 153px; top: 491px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(8)  { left: 168px; top: 496px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(9)  { left: 184px; top: 500px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(10) { left: 200px; top: 502px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(11) { left: 216px; top: 502px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(12) { left: 232px; top: 500px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(13) { left: 247px; top: 496px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(14) { left: 262px; top: 491px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(15) { left: 276px; top: 484px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(16) { left: 289px; top: 476px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(17) { left: 302px; top: 466px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(18) { left: 314px; top: 455px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(19) { left: 325px; top: 443px; transform: rotate(-11deg); }
+.timing__beads--d2 span:nth-child(20) { left: 335px; top: 430px; transform: rotate(-11deg); }
+
+.timing__row { margin-bottom: 32px; }
+
+.timing__item { display: flex; flex-direction: column; }
+.timing__item--left  { align-items: flex-start; }
+.timing__item--center { align-items: center; width: 100%; }
+.timing__item--right { align-items: flex-end; }
+
+.timing__time {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 24px;
   line-height: 31px;
-  color: #000000;
+  color: #000;
 }
 
-.timing-item__time,
-.timing-item__label {
-  display: block;
+.timing__label {
+  font-family: var(--fh);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000;
 }
 
-.timing-item--1 {
-  width: 119px;
-  height: 86px;
-  left: 128px;
-  top: 1662px;
-  text-align: left;
-}
-
-.timing-item--2 {
-  width: 162px;
-  height: 86px;
-  left: 141px;
-  top: 1886px;
-  text-align: center;
-}
-
-.timing-item--3 {
-  width: 119px;
-  height: 86px;
-  left: 82px;
-  top: 2089px;
-  text-align: left;
-}
-
-.timing-item--4 {
-  width: 119px;
-  height: 86px;
-  left: 266px;
-  top: 2216px;
+.timing__item--right .timing__time,
+.timing__item--right .timing__label {
   text-align: right;
 }
 
-/* ── Переход дресс-код (5 кругов) ── */
-.dress-transition {
-  position: absolute;
-  width: 471.96px;
-  height: 116px;
-  left: -39px;
+.timing__pearl {
+  width: 114px;
+  margin: 24px 0 0 7px;
+}
+
+/* ══════════════════════════
+   DRESS CODE
+══════════════════════════ */
+.dress {
+  position: relative;
+  margin-top: 32px;
+}
+
+/* волнистый верх: 5 полукругов-пузырей */
+.dress__wave {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 80px;
   overflow: hidden;
+  margin-left: -39px;
+  margin-right: -39px;
+  padding: 0 4px;
 }
 
-.dress-transition--top {
-  top: 2378px;
-  background: var(--cream);
+.dress__wave--bottom {
+  align-items: flex-start;
+  transform: rotate(180deg);
 }
 
-/* Figma: top-эллипсы — left 0/90/179/272/357 */
-.dress-transition--top .dress-transition__circle--1 {
-  width: 110px;
-  height: 106px;
-  left: 0;
-  top: 10px;
-}
-
-.dress-transition--top .dress-transition__circle--2 {
-  width: 97px;
-  height: 98px;
-  left: 90px;
-  top: 18px;
-}
-
-.dress-transition--top .dress-transition__circle--3 {
-  width: 104px;
-  height: 106px;
-  left: 179px;
-  top: 10px;
-}
-
-.dress-transition--top .dress-transition__circle--4 {
-  width: 97px;
-  height: 98px;
-  left: 272px;
-  top: 18px;
-}
-
-.dress-transition--top .dress-transition__circle--5 {
-  width: 114px;
-  height: 106px;
-  left: 357px;
-  top: 10px;
-}
-
-.dress-transition--bottom {
-  top: 3098px;
-  background: var(--burgundy);
-  transform: matrix(-1, 0, 0, -1, 0, 0);
-  transform-origin: center;
-}
-
-.dress-transition--bottom .dress-transition__circle {
-  background: var(--cream);
-}
-
-.dress-transition--bottom .dress-transition__circle--1 {
-  width: 110px;
-  height: 106px;
-  left: 361.96px;
-  top: 10px;
-}
-
-.dress-transition--bottom .dress-transition__circle--2 {
-  width: 97px;
-  height: 98px;
-  left: 284.96px;
-  top: 0.03px;
-}
-
-.dress-transition--bottom .dress-transition__circle--3 {
-  width: 104px;
-  height: 106px;
-  left: 188.96px;
-  top: 0.06px;
-}
-
-.dress-transition--bottom .dress-transition__circle--4 {
-  width: 94px;
-  height: 94px;
-  left: 105.96px;
-  top: 0.09px;
-}
-
-.dress-transition--bottom .dress-transition__circle--5 {
-  width: 114px;
-  height: 106px;
-  left: 0.96px;
-  top: 0.12px;
-}
-
-.dress-transition__circle {
-  position: absolute;
+.dress__bubble {
+  display: block;
+  width: 20%;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: var(--burgundy);
 }
 
-/* ── Дресс-код ── */
-.dress-bg {
-  position: absolute;
-  width: 471px;
-  height: 684px;
-  left: -39px;
-  top: 2453px;
+.dress__body {
   background: var(--burgundy);
+  margin-left: -39px;
+  margin-right: -39px;
+  padding: 8px 90px 32px;
 }
 
-.dress-title {
-  position: absolute;
-  width: 191px;
-  height: 55px;
-  left: 112px;
-  top: 2523px;
-  font-family: var(--font-heading);
+.dress__title {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 36px;
   line-height: 46px;
   text-align: center;
   color: var(--white);
+  margin-bottom: 24px;
 }
 
-.dress-text {
-  position: absolute;
-  width: 313px;
-  font-family: var(--font-body);
-  font-weight: 400;
+.dress__text {
+  font-family: var(--fb);
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   color: var(--white);
+  margin-bottom: 28px;
 }
 
-.dress-text--1 {
-  height: 74px;
-  left: 51px;
-  top: 2596px;
-}
+.dress__text--2 { margin-top: 28px; }
 
-.dress-text--2 {
-  height: 166px;
-  left: 53px;
-  top: 2896px;
-}
-
-/* ── Образцы ткани ── */
-.swatches-frame {
-  position: absolute;
-  width: 343px;
-  height: 101px;
-  left: 38px;
-  top: 2735px;
-}
-
-.swatches-frame__bg {
-  position: absolute;
-  inset: 0;
-  background: rgba(247, 245, 241, 0.24);
+/* Образцы */
+.dress__swatches-wrap {
+  position: relative;
+  background: rgba(247,245,241,0.24);
   border-radius: 50.5px;
+  padding: 13px 15px;
 }
 
-.swatches {
-  position: absolute;
-  width: 313px;
+.dress__swatches {
+  display: flex;
+  gap: 0;
+  position: relative;
   height: 76px;
-  left: 15px;
-  top: 13px;
 }
 
-.swatches__item {
+.dress__swatch {
   position: absolute;
   width: 75px;
   height: 75px;
@@ -700,118 +452,127 @@ a {
   background-position: center;
 }
 
-.swatches__item--sand {
-  left: 0;
-  top: 0;
-  background-image: url('images/песочный шёлк.jpg');
-}
+.dress__swatch--sand { left: 0;    top: 0; background-image: url('images/песочный шёлк.jpg'); }
+.dress__swatch--ecru { left: 49px; top: 1px; background-image: url('images/экрю шёлк.jpg'); }
+.dress__swatch--wine { left: 115px; top: 1px; background-image: url('images/красный шёлк.jpg'); }
+.dress__swatch--pink { left: 175px; top: 0; background-image: url('images/розовый шёлк.jpg'); }
+.dress__swatch--grey { left: 238px; top: 1px; background-image: url('images/серый шёлк.jpg'); }
 
-.swatches__item--ecru {
-  left: 49px;
-  top: 1px;
-  background-image: url('images/экрю шёлк.jpg');
-}
-
-.swatches__item--wine {
-  left: 115px;
-  top: 1px;
-  background-image: url('images/красный шёлк.jpg');
-}
-
-.swatches__item--pink {
-  left: 175px;
-  top: 0;
-  background-image: url('images/розовый шёлк.jpg');
-}
-
-.swatches__item--grey {
-  left: 238px;
-  top: 1px;
-  background-image: url('images/серый шёлк.jpg');
-}
-
-/* жемчуг 3 внутри swatches-frame: left 305, top 92 (локал) */
-.swatches-pearl3 {
+.dress__pearl3 {
   position: absolute;
   width: 52px;
-  height: 52px;
-  left: 305px;
-  top: 92px;
-  object-fit: contain;
+  right: -18px;
+  bottom: -26px;
   pointer-events: none;
 }
 
-/* ── Пожелания ── */
-.wishes-bg {
-  position: absolute;
-  width: 404px;
-  height: 973px;
-  left: -2px;
-  top: 3122px;
+/* ══════════════════════════
+   WISHES
+══════════════════════════ */
+.wishes {
+  position: relative;
   background: var(--cream);
+  padding: 60px 53px 80px;
+  overflow: visible;
 }
 
-.wishes-title {
+.wishes__pearl-l {
   position: absolute;
-  width: 200px;
-  height: 48px;
-  left: 97px;
-  top: 3285px;
-  font-family: var(--font-heading);
+  width: 85px;
+  left: -20px;
+  top: 180px;
+  pointer-events: none;
+}
+
+.wishes__pearl-sm {
+  position: absolute;
+  width: 40px;
+  left: 71px;
+  top: 270px;
+  pointer-events: none;
+}
+
+/* нить бусин */
+.wishes__beads {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.wishes__beads span {
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url('images/жемчуг.png') center / contain no-repeat;
+}
+
+.wishes__beads span:nth-child(1)  { left: -6px;   top: 420px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(2)  { left:  3px;   top: 408px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(3)  { left: 13px;   top: 398px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(4)  { left: 37px;   top: 382px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(5)  { left: 51px;   top: 375px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(6)  { left: 65px;   top: 368px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(7)  { left: 79px;   top: 362px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(8)  { left: 93px;   top: 358px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(9)  { left: 107px;  top: 355px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(10) { left: 122px;  top: 353px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(11) { left: 137px;  top: 353px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(12) { left: 148px;  top: 355px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(13) { left: 159px;  top: 360px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(14) { left: 170px;  top: 368px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(15) { left: 179px;  top: 378px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(16) { left: 187px;  top: 390px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(17) { left: 193px;  top: 402px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(18) { left: 197px;  top: 416px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(19) { left: 199px;  top: 430px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(20) { left: 199px;  top: 444px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(21) { left: 197px;  top: 458px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(22) { left: 193px;  top: 472px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(23) { left: 187px;  top: 485px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(24) { left: 179px;  top: 497px; transform: rotate(20deg); }
+.wishes__beads span:nth-child(25) { left: 170px;  top: 508px; transform: rotate(20deg); }
+
+.wishes__title {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 32px;
   line-height: 41px;
-  color: #000000;
-}
-
-.wishes-text {
-  position: absolute;
-  width: 294px;
-  font-family: var(--font-body);
-  font-weight: 400;
   text-align: center;
-  color: #000000;
+  color: #000;
+  margin-bottom: 24px;
 }
 
-.wishes-text--1 {
-  height: 97px;
-  left: 53px;
-  top: 3361px;
+.wishes__text {
+  font-family: var(--fb);
   font-size: 16px;
   line-height: 21px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 24px;
 }
 
-.wishes-text--2 {
-  height: 133px;
-  left: 53px;
-  top: 3779px;
+.wishes__text--2 {
   font-size: 15px;
   line-height: 20px;
 }
 
-.wishes-rose {
-  position: absolute;
-  width: 236.09px;
-  height: 225.55px;
-  left: 162.46px;
-  top: 3458.11px;
-  object-fit: contain;
-  transform: rotate(-45.07deg);
+.wishes__rose {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  transform: rotate(-45deg);
   pointer-events: none;
 }
 
-.wishes-flowers {
-  position: absolute;
-  width: 82px;
-  height: 26px;
-  left: 40px;
-  top: 3741px;
-  font-family: var(--font-script);
-  font-weight: 400;
+.wishes__flowers {
+  font-family: var(--fs);
   font-size: 20px;
   line-height: 25px;
-  text-align: center;
-  color: #000000;
+  text-align: left;
+  color: #000;
+  margin: 24px 0 8px;
 }
 
 .link {
@@ -819,141 +580,105 @@ a {
   text-underline-offset: 2px;
 }
 
-/* ── RSVP ── */
-.rsvp-arch {
-  position: absolute;
-  width: 433px;
-  height: 268px;
-  left: -14px;
-  top: 3964px;
-  background: var(--burgundy);
-  border-radius: 50%;
+/* ══════════════════════════
+   RSVP
+══════════════════════════ */
+.rsvp {
+  position: relative;
+  margin-top: 32px;
 }
 
-.rsvp-bg {
-  position: absolute;
-  width: 404px;
-  height: 684px;
-  left: 0;
-  top: 4072px;
+.rsvp__arch {
+  width: 130%;
+  margin-left: -15%;
+  aspect-ratio: 2 / 1;
   background: var(--burgundy);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  margin-bottom: -2px;
 }
 
-.rsvp-title {
-  position: absolute;
-  width: 129px;
-  height: 43px;
-  left: 136px;
-  top: 4083px;
-  font-family: var(--font-heading);
+.rsvp__body {
+  background: var(--burgundy);
+  padding: 0 71px 80px;
+}
+
+.rsvp__title {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 32px;
   line-height: 41px;
   text-align: center;
   color: var(--white);
+  margin-bottom: 4px;
 }
 
-.rsvp-subtitle {
-  position: absolute;
-  width: 109px;
-  height: 20px;
-  left: 146px;
-  top: 4133px;
-  font-family: var(--font-heading);
+.rsvp__subtitle {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: var(--white);
+  margin-bottom: 28px;
 }
 
-.rsvp-text {
-  position: absolute;
-  width: 262px;
-  height: 86px;
-  left: 71px;
-  top: 4187px;
-  font-family: var(--font-body);
-  font-weight: 400;
+.rsvp__text {
+  font-family: var(--fb);
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   color: var(--white);
+  margin-bottom: 32px;
 }
 
-.rsvp-form {
-  position: absolute;
-  width: 280px;
-  left: 61px;
-  top: 4300px;
+.rsvp__form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-.rsvp-form__field {
+.rsvp__field {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: left;
 }
 
-.rsvp-form__label {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+.rsvp__label {
+  font-family: var(--fb);
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
 }
 
-.rsvp-form__input {
-  font-family: var(--font-body);
+.rsvp__input {
+  font-family: var(--fb);
   font-size: 15px;
-  padding: 8px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 9px 12px;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
   color: var(--white);
   outline: none;
   appearance: none;
   -webkit-appearance: none;
 }
 
-.rsvp-form__input:focus {
-  border-color: rgba(255, 255, 255, 0.7);
-}
+.rsvp__input:focus { border-color: rgba(255,255,255,0.7); }
 
-.rsvp-form__input option {
-  color: #000000;
-  background: var(--cream);
-}
+.rsvp__input option { color: #000; background: var(--cream); }
 
-.rsvp-form__submit {
-  font-family: var(--font-heading);
+.rsvp__submit {
+  font-family: var(--fh);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 10px 16px;
-  margin-top: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 2px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 4px;
   background: transparent;
   color: var(--white);
   cursor: pointer;
+  margin-top: 4px;
 }
 
-.rsvp-form__submit:active {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* ── Десктоп: центрирование ── */
-@media (min-width: 403px) {
-  .viewport {
-    width: var(--design-w);
-    height: var(--design-h);
-    margin: 0 auto;
-  }
-
-  .landing {
-    transform: none;
-  }
-}
+.rsvp__submit:active { background: rgba(255,255,255,0.1); }

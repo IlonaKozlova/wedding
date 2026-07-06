@@ -10,269 +10,175 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="viewport">
-    <main class="landing">
+<div class="page">
 
-      <!-- Герой -->
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-card" aria-hidden="true"></div>
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <img class="hero__bg" src="images/фон в начале.jpeg" alt="">
+    <div class="hero__card">
+      <h1 class="hero__names">МАКСИМ<br>&amp;<br>ИЛОНА</h1>
+      <p class="hero__date">23.07<br>2026</p>
+    </div>
+    <img class="hero__pearl-bl" src="images/жемчуг.png" alt="">
+    <img class="hero__pearl-br" src="images/жемчуг.png" alt="">
+  </section>
 
-      <h1 class="hero-names">МАКСИМ<br>&amp;<br>ИЛОНА</h1>
-      <p class="hero-date">23.07<br>2026</p>
+  <!-- ══ WELCOME ══ -->
+  <section class="welcome">
+    <!-- нить жемчуга слева -->
+    <img class="welcome__pearl-big" src="images/жемчуг.png" alt="">
+    <div class="welcome__beads welcome__beads--left" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h2 class="welcome__title">ДОРОГИЕ РОДНЫЕ<br>И БЛИЗКИЕ</h2>
+    <p class="welcome__text">Этот день станет особенным для нас и мы хотим разделить его с теми, кто дорог нашему сердцу — с вами</p>
+    <div class="welcome__envelope">
+      <img class="welcome__envelope-img" src="images/конверт.png" alt="Конверт">
+      <a class="welcome__map-btn" href="https://yandex.ru/maps/-/CHUxqJ2o" target="_blank" rel="noopener">открыть<br>карту</a>
+    </div>
+  </section>
 
-      <img class="pearl pearl--4" src="images/жемчуг.png" alt="" aria-hidden="true">
-      <img class="pearl pearl--2" src="images/жемчуг.png" alt="" aria-hidden="true">
+  <!-- ══ TIMING ══ -->
+  <section class="timing">
+    <!-- нить B: горизонтальная -->
+    <div class="timing__beads timing__beads--h" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
 
-      <!-- Блок 1: приветствие + тайминг -->
-      <div class="block1-bg" aria-hidden="true"></div>
-      <div class="block1-arch" aria-hidden="true"></div>
+    <h2 class="timing__title">ТАЙМИНГ ДНЯ</h2>
 
-      <h2 class="welcome-title">ДОРОГИЕ РОДНЫЕ<br>И БЛИЗКИЕ</h2>
-      <p class="welcome-text">Этот день станет особенным для нас и мы хотим разделить его с теми, кто дорог нашему сердцу — с вами</p>
-
-      <img class="pearl pearl--1" src="images/жемчуг.png" alt="" aria-hidden="true">
-
-      <a class="envelope-group" href="https://yandex.ru/maps/-/CHUxqJ2o" target="_blank" rel="noopener noreferrer">
-        <img class="envelope-group__img" src="images/конверт.png" alt="Открыть карту">
-        <span class="envelope-group__btn-ellipse" aria-hidden="true"></span>
-        <span class="envelope-group__btn-text">открыть<br>карту</span>
-      </a>
-
-      <!-- Дорожка из жемчуга: нить welcome (rotate -75.19deg, left -69, top 1142) -->
-      <div class="beads-string beads-string--welcome" aria-hidden="true">
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <span class="pearl-sm"></span>
-        <!-- вторая половина той же нити (% координаты) -->
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w19"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w20"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w21"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w22"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w23"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w24"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w25"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w26"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w27"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w28"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w29"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w30"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w31"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w32"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w33"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w34"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w35"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--w36"></span>
+    <div class="timing__row timing__row--1">
+      <div class="timing__item timing__item--left">
+        <span class="timing__time">16:00</span>
+        <span class="timing__label">СБОР<br>ГОСТЕЙ</span>
       </div>
+    </div>
 
-      <h2 class="timing-title">ТАЙМИНГ ДНЯ</h2>
+    <!-- нить A: диагональная -->
+    <div class="timing__beads timing__beads--d1" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-      <div class="timing-item timing-item--1">
-        <span class="timing-item__time">16:00</span>
-        <span class="timing-item__label">СБОР<br>ГОСТЕЙ</span>
+    <div class="timing__row timing__row--2">
+      <div class="timing__item timing__item--center">
+        <span class="timing__time">16:30</span>
+        <span class="timing__label">ЦЕРЕМОНИЯ</span>
       </div>
-      <div class="timing-item timing-item--2">
-        <span class="timing-item__time">16:30</span>
-        <span class="timing-item__label">ЦЕРЕМОНИЯ</span>
-      </div>
-      <div class="timing-item timing-item--3">
-        <span class="timing-item__time">17:00</span>
-        <span class="timing-item__label">НАЧАЛО<br>БАНКЕТА</span>
-      </div>
-      <div class="timing-item timing-item--4">
-        <span class="timing-item__time">22:00</span>
-        <span class="timing-item__label">ФИНАЛ<br>ВЕЧЕРА</span>
-      </div>
+    </div>
 
-      <img class="pearl pearl--5" src="images/жемчуг.png" alt="" aria-hidden="true">
-
-      <!-- Дорожки из жемчуга (тайминг) -->
-      <div class="beads-string beads-string--timing-a" aria-hidden="true">
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta19"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta20"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta21"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta22"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta23"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta24"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta25"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta26"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta27"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta28"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta29"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta30"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta31"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta32"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta33"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta34"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta35"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--ta36"></span>
+    <div class="timing__row timing__row--3">
+      <div class="timing__item timing__item--left">
+        <span class="timing__time">17:00</span>
+        <span class="timing__label">НАЧАЛО<br>БАНКЕТА</span>
       </div>
-      <div class="beads-string beads-string--timing-b" aria-hidden="true">
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm"></span><span class="pearl-sm"></span><span class="pearl-sm"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb19"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb20"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb21"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb22"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb23"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb24"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb25"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb26"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb27"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb28"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb29"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb30"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb31"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb32"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb33"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb34"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb35"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--tb36"></span>
+    </div>
+
+    <!-- нить C: обратная диагональ -->
+    <div class="timing__beads timing__beads--d2" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="timing__row timing__row--4">
+      <div class="timing__item timing__item--right">
+        <span class="timing__time">22:00</span>
+        <span class="timing__label">ФИНАЛ<br>ВЕЧЕРА</span>
       </div>
+    </div>
 
-      <!-- Бусы (декор, пожелания) — нить D по Figma -->
-      <div class="beads-string beads-string--d" aria-hidden="true">
-        <!-- px-координаты (первая половина) -->
-        <span class="pearl-sm pearl-sm--d1"></span>
-        <span class="pearl-sm pearl-sm--d2"></span>
-        <span class="pearl-sm pearl-sm--d3"></span>
-        <span class="pearl-sm pearl-sm--d4"></span>
-        <span class="pearl-sm pearl-sm--d5"></span>
-        <span class="pearl-sm pearl-sm--d6"></span>
-        <span class="pearl-sm pearl-sm--d7"></span>
-        <span class="pearl-sm pearl-sm--d8"></span>
-        <span class="pearl-sm pearl-sm--d9"></span>
-        <span class="pearl-sm pearl-sm--d10"></span>
-        <span class="pearl-sm pearl-sm--d11"></span>
-        <span class="pearl-sm pearl-sm--d12"></span>
-        <span class="pearl-sm pearl-sm--d13"></span>
-        <span class="pearl-sm pearl-sm--d14"></span>
-        <span class="pearl-sm pearl-sm--d15"></span>
-        <span class="pearl-sm pearl-sm--d16"></span>
-        <span class="pearl-sm pearl-sm--d17"></span>
-        <span class="pearl-sm pearl-sm--d18"></span>
-        <!-- % координаты (вторая половина) -->
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d19"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d20"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d21"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d22"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d23"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d24"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d25"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d26"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d27"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d28"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d29"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d30"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d31"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d32"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d33"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d34"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d35"></span>
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d36"></span>
-        <!-- жемчуг 22 (% верхняя точка) -->
-        <span class="pearl-sm pearl-sm--pct pearl-sm--d37"></span>
-      </div>
+    <img class="timing__pearl" src="images/жемчуг.png" alt="">
+  </section>
 
-      <!-- Блок 2: дресс-код -->
-      <div class="dress-transition dress-transition--top" aria-hidden="true">
-        <span class="dress-transition__circle dress-transition__circle--1"></span>
-        <span class="dress-transition__circle dress-transition__circle--2"></span>
-        <span class="dress-transition__circle dress-transition__circle--3"></span>
-        <span class="dress-transition__circle dress-transition__circle--4"></span>
-        <span class="dress-transition__circle dress-transition__circle--5"></span>
-      </div>
-
-      <div class="dress-bg" aria-hidden="true"></div>
-
-      <div class="dress-transition dress-transition--bottom" aria-hidden="true">
-        <span class="dress-transition__circle dress-transition__circle--1"></span>
-        <span class="dress-transition__circle dress-transition__circle--2"></span>
-        <span class="dress-transition__circle dress-transition__circle--3"></span>
-        <span class="dress-transition__circle dress-transition__circle--4"></span>
-        <span class="dress-transition__circle dress-transition__circle--5"></span>
-      </div>
-
-      <h2 class="dress-title">ДРЕСС-КОД</h2>
-      <p class="dress-text dress-text--1">Мы стараемся сделать наш праздник красивым, и будем благодарны, если вы поддержите стиль и цветовую гамму свадьбы в своих элегантных образах</p>
-
-      <div class="swatches-frame">
-        <div class="swatches-frame__bg" aria-hidden="true"></div>
-        <div class="swatches">
-          <span class="swatches__item swatches__item--sand" aria-hidden="true"></span>
-          <span class="swatches__item swatches__item--ecru" aria-hidden="true"></span>
-          <span class="swatches__item swatches__item--wine" aria-hidden="true"></span>
-          <span class="swatches__item swatches__item--pink" aria-hidden="true"></span>
-          <span class="swatches__item swatches__item--grey" aria-hidden="true"></span>
+  <!-- ══ DRESS CODE ══ -->
+  <section class="dress">
+    <div class="dress__wave" aria-hidden="true">
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+    </div>
+    <div class="dress__body">
+      <h2 class="dress__title">ДРЕСС-КОД</h2>
+      <p class="dress__text">Мы стараемся сделать наш праздник красивым, и будем благодарны, если вы поддержите стиль и цветовую гамму свадьбы в своих элегантных образах</p>
+      <div class="dress__swatches-wrap">
+        <div class="dress__swatches">
+          <span class="dress__swatch dress__swatch--sand"></span>
+          <span class="dress__swatch dress__swatch--ecru"></span>
+          <span class="dress__swatch dress__swatch--wine"></span>
+          <span class="dress__swatch dress__swatch--pink"></span>
+          <span class="dress__swatch dress__swatch--grey"></span>
         </div>
-        <img class="swatches-pearl3" src="images/жемчуг.png" alt="" aria-hidden="true">
+        <img class="dress__pearl3" src="images/жемчуг.png" alt="">
       </div>
+      <p class="dress__text dress__text--2">Мы будем очень рады, если вы поддержите цветовую гамму нашей свадьбы и дополните свой образ ярким красным акцентом – это может быть обувь, сумка, галстук, бабочка, пояс или цветок в волосах. Будем счастливы видеть вас в таком стильном настроении!</p>
+    </div>
+    <div class="dress__wave dress__wave--bottom" aria-hidden="true">
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+      <span class="dress__bubble"></span>
+    </div>
+  </section>
 
-      <p class="dress-text dress-text--2">Мы будем очень рады, если вы поддержите цветовую гамму нашей свадьбы и дополните свой образ ярким красным акцентом – это может быть обувь, сумка, галстук, бабочка, пояс или цветок в волосах. Будем счастливы видеть вас в таком стильном настроении!</p>
+  <!-- ══ WISHES ══ -->
+  <section class="wishes">
+    <img class="wishes__pearl-l" src="images/жемчуг.png" alt="">
+    <img class="wishes__pearl-sm" src="images/жемчуг.png" alt="">
+    <!-- нить D -->
+    <div class="wishes__beads" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h2 class="wishes__title">ПОЖЕЛАНИЯ</h2>
+    <p class="wishes__text">Для нас самое главное — разделить этот день вместе с вами. Мы также будем благодарны за вклад в конверте, который поможет осуществить наши общие мечты</p>
+    <img class="wishes__rose" src="images/роза.png" alt="">
+    <p class="wishes__flowers">flowers</p>
+    <p class="wishes__text wishes__text--2">Невеста очень любит цветы, но не успеет в полной мере насладиться ими в этот день. Поэтому будем благодарны если свяжитесь с <a class="link" href="https://artofflowers.ru" target="_blank" rel="noopener">artofflowers.ru</a> на ул. Планерная 87 и закажите сертификат на цветы.</p>
+  </section>
 
-      <!-- Блок 3: пожелания -->
-      <div class="wishes-bg" aria-hidden="true"></div>
-
-      <h2 class="wishes-title">ПОЖЕЛАНИЯ</h2>
-      <p class="wishes-text wishes-text--1">Для нас самое главное — разделить этот день вместе с вами. Мы также будем благодарны за вклад в конверте, который поможет осуществить наши общие мечты</p>
-
-      <img class="pearl pearl--6" src="images/жемчуг.png" alt="" aria-hidden="true">
-      <img class="pearl pearl--7" src="images/жемчуг.png" alt="" aria-hidden="true">
-      <img class="wishes-rose" src="images/роза.png" alt="" aria-hidden="true">
-
-      <p class="wishes-flowers">flowers</p>
-      <p class="wishes-text wishes-text--2">Невеста очень любит цветы, но не успеет в полной мере насладиться ими в этот день. Поэтому будем благодарны если свяжитесь с <a class="link" href="https://artofflowers.ru" target="_blank" rel="noopener noreferrer">artofflowers.ru</a> на ул. Планерная 87 и закажите сертификат на цветы.</p>
-
-      <!-- RSVP -->
-      <div class="rsvp-arch" aria-hidden="true"></div>
-      <div class="rsvp-bg" aria-hidden="true"></div>
-
-      <h2 class="rsvp-title">R.S.V.P</h2>
-      <p class="rsvp-subtitle">анкета гостя</p>
-      <p class="rsvp-text">Пожалуйста, подтвердите своё присутствие, до 10.07.2026<br><br>Это очень поможет нам в организации</p>
-
-      <form class="rsvp-form" action="#" method="post">
-        <label class="rsvp-form__field">
-          <span class="rsvp-form__label">Ваше имя</span>
-          <input class="rsvp-form__input" type="text" name="name" required>
+  <!-- ══ RSVP ══ -->
+  <section class="rsvp">
+    <div class="rsvp__arch" aria-hidden="true"></div>
+    <div class="rsvp__body">
+      <h2 class="rsvp__title">R.S.V.P</h2>
+      <p class="rsvp__subtitle">анкета гостя</p>
+      <p class="rsvp__text">Пожалуйста, подтвердите своё присутствие, до 10.07.2026<br><br>Это очень поможет нам в организации</p>
+      <form class="rsvp__form" action="#" method="post">
+        <label class="rsvp__field">
+          <span class="rsvp__label">Ваше имя</span>
+          <input class="rsvp__input" type="text" name="name" required>
         </label>
-        <label class="rsvp-form__field">
-          <span class="rsvp-form__label">Присутствие</span>
-          <select class="rsvp-form__input" name="attendance" required>
+        <label class="rsvp__field">
+          <span class="rsvp__label">Присутствие</span>
+          <select class="rsvp__input" name="attendance" required>
             <option value="">Выберите</option>
             <option value="yes">Буду</option>
             <option value="no">Не смогу</option>
           </select>
         </label>
-        <button class="rsvp-form__submit" type="submit">Отправить</button>
+        <button class="rsvp__submit" type="submit">Отправить</button>
       </form>
+    </div>
+  </section>
 
-    </main>
-  </div>
+</div>
 </body>
 </html>
